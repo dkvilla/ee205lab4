@@ -1,0 +1,19 @@
+CCC = g++
+CCFLAGS = -ansi
+
+lab4task1: container.o common.o listnode.o driver.o 
+	$(CCC) -o lab4task1 container.o common.o listnode.o driver.o
+
+common.o: common.h
+
+container.o: container.h entry.h common.h
+
+listnode.o: listnode.h
+
+driver.o: driver.h
+
+clean:
+	rm -f *.o
+
+real_clean: clean
+	rm -f lab4task1

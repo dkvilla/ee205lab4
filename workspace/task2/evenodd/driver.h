@@ -1,0 +1,1 @@
+int digit_to_int(const char c);
